@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+group :production do 
+	gem 'rails_12factor'
+	gem 'pg'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
@@ -34,6 +38,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development, :test do 
+	gem 'sqlite3'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
